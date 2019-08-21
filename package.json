@@ -7,21 +7,13 @@
   "license": "ISC",
   "keywords": [],
   "scripts": {
-    "start": "node ./index.js",
-    "test": "jest && eslint index.js 'test/**.js'",
-    "lint": "eslint index.js 'test/**.js' --fix"
+    "start": "echo npm run start && node ./index.js",
+    "test": "echo npm run test",
+    "lint": "echo npm run lint"
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^5.5.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.11.1",
-    "jest": "^23.5.0",
-    "prettier": "^1.14.2"
+
   },
   "engines": {
     "node": ">= 8.3.0"
