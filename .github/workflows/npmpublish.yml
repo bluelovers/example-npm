@@ -23,7 +23,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: My first step
+        if: github.event_name == 'pull_request'
+        run: echo did my first step run?
       - uses: actions/checkout@v1
+      - uses: veggiemonk/skip-commit@master
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -31,4 +35,5 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          COMMIT_FILTER: "skip-ci"
 
