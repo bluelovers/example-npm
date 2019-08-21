@@ -1,0 +1,16 @@
+name: test sub path
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./my-subpath/sub-path-with-actions
+
