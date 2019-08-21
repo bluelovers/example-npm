@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - if: 0
+      - if: false
       - uses: actions/checkout@v1
       - uses: ./my-subpath/sub-path-with-actions
 
