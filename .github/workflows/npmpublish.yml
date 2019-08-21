@@ -28,6 +28,8 @@ jobs:
         run: echo did my first step run?
       - uses: actions/checkout@v1
       - uses: veggiemonk/skip-commit@master
+          env:
+            COMMIT_FILTER: skip-ci
       - uses: actions/setup-node@v1
         with:
           node-version: 12
