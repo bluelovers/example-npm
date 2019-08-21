@@ -41,6 +41,9 @@
       }
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "nodemonConfig": {
     "exec": "npm start",
     "watch": [
