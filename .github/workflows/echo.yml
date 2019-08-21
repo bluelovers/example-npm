@@ -17,6 +17,6 @@ jobs:
         with:
           node-version: 12
       - run: echo ${{secrets.xxx_token}}
-      - run: bash
+      - run: echo bash
       - uses: ./my-subpath/sub-path-with-actions
       
