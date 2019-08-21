@@ -1,16 +1,4 @@
 name: sub path with actions
 
-on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo this is sub path with actions
+run: echo this is sub path with actions
 
