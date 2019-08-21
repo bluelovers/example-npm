@@ -1,4 +1,4 @@
-name: test sub path
+name: sub-path-with-actions
 
 on:
   pull_request:
@@ -12,5 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - uses: ./my-subpath/sub-path-with-actions
 

@@ -2,4 +2,5 @@ name: sub path with actions
 
 runs:
   - run: echo this is sub path with actions
+  - run: node -v
 
