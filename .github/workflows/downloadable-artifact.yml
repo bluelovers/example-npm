@@ -1,4 +1,4 @@
-name: test echo secrets
+name: downloadable-artifact
 
 on:
   pull_request:
@@ -8,11 +8,13 @@ on:
     branches:
       - master
 
-steps:
-  - uses: actions/checkout@master
-  - run: mkdir -p ./artifact
-  - run: echo hello > ./artifact/world.txt
-  - uses: actions/upload-artifact@master
-    with:
-      name: my-artifact
-      path: path/to/artifact
+jobs:
+  build:
+    steps:
+      - uses: actions/checkout@master
+      - run: mkdir -p ./artifact
+      - run: echo hello > ./artifact/world.txt
+      - uses: actions/upload-artifact@master
+        with:
+          name: my-artifact
+          path: path/to/artifact
