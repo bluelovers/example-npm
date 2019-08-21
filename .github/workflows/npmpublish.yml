@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Node.js Package Publish
         if: github.event_name == 'pull_request'
-        run: echo did my first step run?
+        - run: echo did my first step run?
         - uses: actions/checkout@v1
         - uses: actions/setup-node@v1
           with:
