@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron:  '0 0 * * *'
 
 jobs:
   build:
@@ -16,5 +18,4 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: cd ./my-subpath
-      - run: node script-1.js
+      - run: cd ./my-subpath && node script-1.js
