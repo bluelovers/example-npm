@@ -3,3 +3,7 @@
  */
 
 console.log(__dirname);
+
+console.dir(process.env);
+
+console.dir('GITHUB_TOKEN' in process.env);
