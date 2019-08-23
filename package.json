@@ -2,24 +2,42 @@
   "name": "@bluelovers/temp-github-actions-example-npm",
   "version": "1.0.0",
   "description": "Find the Scrabble score for a given word",
+  "keywords": [],
+  "homepage": "https://github.com/bluelovers/example-npm#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/example-npm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/example-npm.git"
+  },
+  "license": "ISC",
   "author": "Steve Winton <stevewinton@gmail.com> (https://github.com/swinton)",
   "main": "index.js",
-  "license": "ISC",
-  "keywords": [],
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "echo npm run lint",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish": "git commit -m \"publish new version\" .",
+    "sort-package-json": "npx sort-package-json ./package.json",
     "start": "echo npm run start && node ./index.js",
     "test": "echo npm run test",
-    "lint": "echo npm run lint"
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
   },
-  "dependencies": {},
-  "devDependencies": {
-
-  },
-  "engines": {
-    "node": ">= 8.3.0"
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
   },
   "jest": {
-    "testEnvironment": "node",
     "collectCoverageFrom": [
       "index.js",
       "lib/*.js"
@@ -31,16 +49,15 @@
         "lines": 80,
         "statements": 80
       }
-    }
+    },
+    "testEnvironment": "node"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 8.3.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "nodemonConfig": {
-    "exec": "npm start",
-    "watch": [
-      ".env",
-      "."
-    ]
   }
 }

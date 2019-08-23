@@ -20,3 +20,5 @@ For pushes to the _default_ branch (`master`), in addition to the above Actions,
 This repository is [licensed under CC0-1.0](LICENSE), which waives all copyright restrictions.
 
 <https://help.github.com/en/articles/workflow-syntax-for-github-actions#on>
+<https://developer.github.com/actions/creating-github-actions/accessing-the-runtime-environment/>
+

@@ -18,3 +18,7 @@ jobs:
           node-version: 12
       - run: echo ${{secrets.xxx_token}}
       - run: echo bash
+      - run: echo $GITHUB_REPOSITORY
+      - run: echo $GITHUB_EVENT_NAME
+      - run: echo $GITHUB_ACTION
+      - run: echo $GITHUB_TOKEN
