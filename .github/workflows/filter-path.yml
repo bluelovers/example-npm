@@ -1,0 +1,14 @@
+name: filter path
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'filter-path/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo filter path
